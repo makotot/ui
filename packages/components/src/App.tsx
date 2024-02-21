@@ -21,6 +21,12 @@ function App() {
         <div className="bg-azure-radiance-500">test</div>
         <span className="bg-azure-radiance-500">test</span>
       </VStack>
+      <VStack spacing='lg' element='section'>
+        <div className="bg-azure-radiance-500">test</div>
+        <div className="bg-azure-radiance-500">test</div>
+        <div className="bg-azure-radiance-500">test</div>
+        <span className="bg-azure-radiance-500">test</span>
+      </VStack>
 
       <HStack spacing="sm" wrap="wrap" align="start">
         <div className="bg-azure-radiance-500">test</div>

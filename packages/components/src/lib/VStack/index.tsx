@@ -1,9 +1,10 @@
-import { PropsWithChildren, forwardRef } from "react"
+import { ElementType, PropsWithChildren, createElement, forwardRef } from "react"
 import { tv } from 'tailwind-variants';
 
 type Props = PropsWithChildren<{
   spacing?: 'none' | 'sm' | 'md' | 'lg' | 'xl'
   align?: 'start' | 'center' | 'end' | 'stretch'
+  element?: ElementType,
 }>
 
 const vstack = tv({
@@ -28,8 +29,8 @@ const vstack = tv({
   },
 })
 
-export const VStack = forwardRef<HTMLDivElement, Props>((props, ref) => {
-  const { children, spacing = 'none', align, ...rest } = props
+export const VStack = forwardRef<HTMLElement, Props>((props, ref) => {
+  const { children, spacing = 'none', align, element = 'div', ...rest } = props
 
-  return <div className={vstack({spacing, align})} {...rest} ref={ref}>{children}</div>
+  return createElement(element, {className: vstack({spacing, align}), ...rest, ref}, children)
 })
