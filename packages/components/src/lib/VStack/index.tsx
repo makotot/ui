@@ -1,11 +1,11 @@
-import { ElementType, PropsWithChildren, createElement, forwardRef } from "react"
+import { AllHTMLAttributes, ElementType, PropsWithChildren, createElement, forwardRef } from "react"
 import { tv } from 'tailwind-variants';
 
 type Props = PropsWithChildren<{
   spacing?: 'none' | 'sm' | 'md' | 'lg' | 'xl'
   align?: 'start' | 'center' | 'end' | 'stretch'
   element?: ElementType,
-}>
+} & AllHTMLAttributes<HTMLElement>>
 
 const vstack = tv({
   base: 'flex flex-col',

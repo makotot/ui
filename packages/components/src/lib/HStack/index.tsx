@@ -1,4 +1,4 @@
-import { ElementType, PropsWithChildren, createElement, forwardRef } from "react"
+import { AllHTMLAttributes, ElementType, PropsWithChildren, createElement, forwardRef } from "react"
 import { tv } from 'tailwind-variants';
 
 type Props = PropsWithChildren<{
@@ -6,7 +6,7 @@ type Props = PropsWithChildren<{
   align?: 'start' | 'center' | 'end' | 'stretch'
   wrap?: 'none' | 'wrap',
   element?: ElementType,
-}>
+} & AllHTMLAttributes<HTMLElement>>
 
 const hstack = tv({
   base: 'flex flex-row',
