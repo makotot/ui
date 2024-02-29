@@ -1,8 +1,12 @@
 import { HStack, VStack } from "./lib"
+import { Box } from "./lib/Box"
 
 function App() {
   return (
     <>
+      <Box padding="md" bgColor='black'>
+        <span className="text-white">Box</span>
+      </Box>
       <VStack spacing="sm" align="start">
         <div className="bg-azure-radiance-500">test</div>
         <div className="bg-azure-radiance-500">test</div>
